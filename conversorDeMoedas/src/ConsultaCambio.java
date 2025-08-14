@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.Locale;
 
 public class ConsultaCambio {
-    private final String API_KEY = "${API_KEY_EXCHANGE_RATE}";
+    private final String API_KEY = System.getenv("API_KEY_EXCHANGE_RATE");
 
     private HttpClient http = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))
